@@ -30,7 +30,6 @@ addUser.addEventListener('click', async () => {
     user.email
   );
   appState.push(classUser)
-  console.log(appState)
   domRenderer(appState)
 });
 //Rendering dom
@@ -50,7 +49,6 @@ const domRenderer = (stateArr) => {
 };
 //searching feature
 searchInput.addEventListener("keyup",(e) => {
-  console.log(e,searchInput.value);
   const filterAppState = appState.filter(user =>
     user.name.toLowerCase()
     .includes(searchInput.value.toLowerCase()) ||
