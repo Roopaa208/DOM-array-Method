@@ -6,7 +6,7 @@ const searchInput = document.getElementById("search");
 const descsortBtn = document.getElementById("sort-desc");
 const ascsortBtn = document.getElementById("sort-asc");
 const appState = []
-
+//creating our own class
 class User{
   constructor(title,firstname,lastname,gender,email){
     this.name = `${title} ${firstname} ${lastname}`
@@ -15,7 +15,7 @@ class User{
   }
 }
 
-
+//calling api feature
 addUser.addEventListener('click', async () => {
   const userData = await fetch(api, {
     method: "GET", 
@@ -33,7 +33,7 @@ addUser.addEventListener('click', async () => {
   console.log(appState)
   domRenderer(appState)
 });
-
+//Rendering dom
 const domRenderer = (stateArr) => {
   userList.innerHTML = null
   stateArr.forEach(userObj => {
@@ -48,7 +48,7 @@ const domRenderer = (stateArr) => {
     userList.appendChild(userEl);
   });
 };
-
+//searching feature
 searchInput.addEventListener("keyup",(e) => {
   console.log(e,searchInput.value);
   const filterAppState = appState.filter(user =>
@@ -62,7 +62,7 @@ searchInput.addEventListener("keyup",(e) => {
   domRenderer(filterAppState)
 });
 
-
+//sorting feature
 descsortBtn.addEventListener('click',() => {
   const appStateCopy = [...appState]
   appStateCopy.sort((a,b) => a.name < b.name ? 1: -1)
