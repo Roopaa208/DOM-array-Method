@@ -1,0 +1,60 @@
+#search{
+  height:40px;
+  width:70%;
+  font-size:20px;
+  padding: 5px;
+  color:white;
+  background-color:black;
+}
+#card{
+   width: 245px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px auto;
+    padding: 30px;
+    background: linear-gradient(
+      35deg,
+      #ccffff,
+      #ffcccc
+    );
+
+}
+
+
+#user-btn {
+  height: 50px;
+  width: 20%;
+  background-color: #0F5897;
+  margin: 50px auto;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size:15px;
+  color:white;
+}
+
+  #user-btn:hover {
+    animation-name: background-color;
+    animation-duration: 500ms;
+  }
+
+  #sort-desc{
+      height: 50px;
+      width: 20%;
+      background-color: #0F5897;
+      margin: 50px auto;
+      border-radius: 5px;
+      font-family: sans-serif;
+      font-size:15px;
+      color:white;
+  }
+
+  #sort-asc{
+      height: 50px;
+      width: 20%;
+      background-color: #0F5897;
+      margin: 50px auto;
+      border-radius: 5px;
+      font-family: sans-serif;
+      font-size:15px;
+      color:white;
+  }
